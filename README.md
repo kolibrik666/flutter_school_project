@@ -8,4 +8,4 @@ This project is a starting point for a Flutter application.
 
 cd C:\Users\user\AppData\Local\Android\Sdk\emulator
 
-emulator -avd Medium_Phone_API_35
+.\emulator.exe -avd Medium_Phone_API_35

@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import 'quiz.dart';
+import 'package:provider/provider.dart';
+import 'todo_provider.dart';
+import 'todo_page.dart';
 
 void main() {
-  runApp(const QuizApp());
+  runApp(const MyApp());
 }
 
-class QuizApp extends StatelessWidget {
-  const QuizApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Quiz(),
-      debugShowCheckedModeBanner: false,
+    return ChangeNotifierProvider(
+      create: (_) => TodoProvider(),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: TodoPage(),
+      ),
     );
   }
 }
