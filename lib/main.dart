@@ -1,9 +1,24 @@
 import 'package:flutter/material.dart';
+<<<<<<< Updated upstream
 import 'dart:math';
 
 void main() 
 {
   runApp(const MyApp());
+=======
+import 'package:provider/provider.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'hurdle_provider.dart';
+import 'word_hurdle_page.dart';
+
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => HurdleProvider(),
+      child: const MyApp(),
+    ),
+  );
+>>>>>>> Stashed changes
 }
 
 class MyApp extends StatelessWidget 
@@ -13,12 +28,26 @@ class MyApp extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+<<<<<<< Updated upstream
       title: 'Roll the Dice',
       theme: ThemeData(
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(title: 'Home Page'),
+=======
+      title: 'Word Hurdle Puzzle',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+      ),
+      builder: EasyLoading.init(),
+      home: const WordHurdlePage(),
+>>>>>>> Stashed changes
     );
   }
 }
