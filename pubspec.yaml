@@ -33,7 +33,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   intl:  
   provider:
-  http:
+  http: ^1.5.0
   geolocator:
   geocoding:
   flutter_easyloading:
